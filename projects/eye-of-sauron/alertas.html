@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alertas ao vivo — Eye of Sauron. Sinais de risco em dados públicos, servidos pela API do mini-Foundry. Para revisão humana, nunca acusações." />
+  <title>Alertas ao vivo — Eye of Sauron</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/brand-hub.css" />
+  <style>
+    .alertas-wrap { padding-top: calc(var(--navbar-height) + var(--space-2xl)); }
+    .alertas-config {
+      display: flex; gap: var(--space-sm); flex-wrap: wrap; align-items: center;
+      margin-bottom: var(--space-xl); font-family: var(--font-mono); font-size: 0.85rem;
+    }
+    .alertas-config input {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      color: var(--text-primary); padding: 8px 12px; border-radius: var(--radius-md);
+      font-family: var(--font-mono); font-size: 0.85rem;
+    }
+    #api-base { min-width: 260px; }
+    .alertas-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: var(--space-md); margin-bottom: var(--space-xl); }
+    .kpi { background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg); padding: var(--space-lg); text-align: center; }
+    .kpi-num { display: block; font-size: 2rem; font-weight: 800; color: var(--neon-amber);
+      font-family: var(--font-mono); }
+    .kpi-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;
+      letter-spacing: 0.05em; }
+    .alertas-filtros { display: flex; gap: var(--space-sm); flex-wrap: wrap;
+      align-items: center; margin-bottom: var(--space-lg); }
+    .alertas-filtros select, .alertas-filtros input {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      color: var(--text-primary); padding: 8px 12px; border-radius: var(--radius-md);
+      font-size: 0.85rem; }
+    .alertas-status { font-family: var(--font-mono); font-size: 0.8rem;
+      color: var(--text-muted); margin-bottom: var(--space-lg); }
+    .alertas-status.ok { color: var(--neon-green); }
+    .alertas-status.erro { color: var(--neon-amber); }
+    #alertas-list { display: grid; gap: var(--space-md); }
+    .alerta-card { padding: var(--space-lg); }
+    .alerta-head { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap;
+      margin-bottom: var(--space-sm); }
+    .alerta-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .alerta-tipo { font-size: 1.05rem; margin: 0; }
+    .alerta-score { margin-left: auto; font-family: var(--font-mono); font-size: 0.8rem;
+      color: var(--text-muted); }
+    .alerta-ent, .alerta-regra, .alerta-fonte, .alerta-limit {
+      font-size: 0.9rem; margin: 4px 0; line-height: 1.5; }
+    .alerta-fonte { color: var(--text-muted); font-size: 0.8rem; }
+    .alerta-limit { color: var(--text-secondary); }
+    .alertas-empty { color: var(--text-muted); text-align: center; padding: var(--space-2xl); }
+    .alertas-disclaimer { font-size: 0.8rem; color: var(--text-muted);
+      border-left: 2px solid var(--neon-amber); padding-left: var(--space-md);
+      margin-bottom: var(--space-xl); }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg" />
+</head>
+
+<body class="brand-amber">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../../index.html" class="navbar-logo">
+        <svg class="logo-eye" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="18" rx="17" ry="11" stroke="#ff6b35" stroke-width="1.5" opacity="0.4"/><circle cx="18" cy="18" r="6" fill="url(#egA)"/><circle cx="18" cy="18" r="3" fill="#ff6b35" opacity="0.9"/><defs><radialGradient id="egA" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs></svg>
+        <span>EOS <span class="accent">Platform</span></span>
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="index.html">Eye of Sauron</a></li>
+        <li><a href="../index.html">Projetos</a></li>
+        <li><a href="../../about.html">Sobre</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <button class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container alertas-wrap">
+    <span class="section-label" style="color: var(--neon-amber)">Mini-Foundry · ao vivo</span>
+    <h1 class="gradient-text-amber" style="margin: 0.25rem 0 0.5rem;">Alertas Canônicos</h1>
+    <p class="alertas-disclaimer">
+      Cada alerta é um <strong>sinal de risco para revisão humana</strong> — nunca uma acusação.
+      Toda linha traz fonte, regra e a sua <em>limitação</em> (o "não sei"). Dados públicos.
+    </p>
+
+    <!-- Config da API -->
+    <div class="alertas-config">
+      <label for="api-base">API:</label>
+      <input id="api-base" type="text" placeholder="http://127.0.0.1:8000" />
+      <button id="api-save" class="btn btn-outline" style="padding:8px 16px;">Conectar</button>
+    </div>
+
+    <!-- KPIs -->
+    <div id="alertas-stats" class="alertas-stats"></div>
+
+    <!-- Filtros -->
+    <div class="alertas-filtros">
+      <label>Score mín.:
+        <select id="flt-score">
+          <option value="">todos</option>
+          <option value="0.5">≥ 0.5</option>
+          <option value="0.7" selected>≥ 0.7</option>
+          <option value="0.9">≥ 0.9</option>
+        </select>
+      </label>
+      <input id="flt-entidade" type="text" placeholder="filtrar por CNPJ/entidade" />
+      <button id="flt-aplicar" class="btn btn-amber" style="padding:8px 16px;">Aplicar</button>
+    </div>
+
+    <p id="alertas-status" class="alertas-status"></p>
+
+    <!-- Lista -->
+    <div id="alertas-list"></div>
+  </main>
+
+  <footer style="margin-top: var(--space-3xl);">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-xl);">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2025 Eye of Sauron Platform</p>
+        <div style="display:flex; gap: 1rem;">
+          <a href="index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Eye of Sauron</a>
+          <a href="../../index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Início</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/alertas.js"></script>
+</body>
+</html>

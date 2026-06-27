@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Devinho — Engenheiro de Software Autônomo baseado em IA. Planeja, codifica, testa e faz deploy de software de forma independente." />
+  <title>Devinho — EOS Platform</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/brand-hub.css" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg" />
+</head>
+
+<body class="brand-green">
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../../index.html" class="navbar-logo">
+        <svg class="logo-eye" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="18" rx="17" ry="11" stroke="#ff6b35" stroke-width="1.5" opacity="0.4"/><circle cx="18" cy="18" r="6" fill="url(#egD)"/><circle cx="18" cy="18" r="3" fill="#ff6b35" opacity="0.9"/><defs><radialGradient id="egD" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs></svg>
+        <span>EOS <span class="accent">Platform</span></span>
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="../index.html" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="../../blog/index.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="../../about.html" data-i18n="nav.about">Sobre</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="lang-toggle"><button class="lang-btn active" data-lang="pt">PT</button><button class="lang-btn" data-lang="en">EN</button></div>
+        <button class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BRAND HERO -->
+  <header class="brand-hero brand-hero-green">
+    <div class="brand-hero-bg" aria-hidden="true">
+      <div class="brand-hero-glow brand-hero-glow-green"></div>
+      <!-- Terminal lines animation -->
+      <div class="terminal-bg" aria-hidden="true">
+        <div class="term-line" style="top:15%; animation-delay:0s">$ git clone devinho-agent</div>
+        <div class="term-line" style="top:28%; animation-delay:0.8s">$ python run.py --goal "build a REST API"</div>
+        <div class="term-line" style="top:41%; animation-delay:1.6s">✓ Planning architecture...</div>
+        <div class="term-line" style="top:54%; animation-delay:2.4s">✓ Writing code...</div>
+        <div class="term-line" style="top:67%; animation-delay:3.2s">✓ Running tests... 47/47 passed</div>
+        <div class="term-line" style="top:80%; animation-delay:4.0s">✓ Deploying to production...</div>
+      </div>
+    </div>
+
+    <div class="container brand-hero-content">
+      <div class="animate-fade-up">
+        <div class="brand-robot-icon">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="38" width="80" height="58" rx="12" fill="rgba(0,255,136,0.08)" stroke="#00ff88" stroke-width="2"/>
+            <!-- Eyes -->
+            <circle cx="42" cy="62" r="10" fill="rgba(0,255,136,0.15)" stroke="#00ff88" stroke-width="1.5"/>
+            <circle cx="42" cy="62" r="5" fill="#00ff88"/>
+            <circle cx="44.5" cy="59.5" r="1.5" fill="white" opacity="0.8"/>
+            <circle cx="78" cy="62" r="10" fill="rgba(0,255,136,0.15)" stroke="#00ff88" stroke-width="1.5"/>
+            <circle cx="78" cy="62" r="5" fill="#00ff88"/>
+            <circle cx="80.5" cy="59.5" r="1.5" fill="white" opacity="0.8"/>
+            <!-- Mouth: code -->
+            <path d="M40 82 L48 76 L40 70" stroke="#00ff88" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+            <path d="M80 82 L72 76 L80 70" stroke="#00ff88" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+            <line x1="52" y1="76" x2="68" y2="76" stroke="#00ff88" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <!-- Antenna -->
+            <line x1="60" y1="38" x2="60" y2="22" stroke="#00ff88" stroke-width="2.5"/>
+            <circle cx="60" cy="18" r="6" fill="url(#devGrad)" stroke="#00ff88" stroke-width="1.5"/>
+            <!-- Ears -->
+            <rect x="8" y="54" width="12" height="16" rx="6" stroke="#00ff88" stroke-width="1.5" opacity="0.6"/>
+            <rect x="100" y="54" width="12" height="16" rx="6" stroke="#00ff88" stroke-width="1.5" opacity="0.6"/>
+            <!-- Chest panel -->
+            <rect x="36" y="90" width="48" height="3" rx="1.5" fill="#00ff88" opacity="0.3"/>
+            <defs>
+              <linearGradient id="devGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00ff88"/>
+                <stop offset="100%" stop-color="#00aaff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h1 class="brand-hero-title gradient-text-green">Devinho</h1>
+        <p class="brand-hero-tagline">Engenheiro de Software Autônomo</p>
+        <p class="brand-hero-desc">
+          Dado um objetivo, o Devinho planeja a arquitetura, escreve o código, gera e roda os testes, refatora e faz deploy — tudo sozinho, dentro de um sandbox de execução. Um agente de IA no estilo do <strong style="color: var(--neon-green)">Devin</strong>, capaz de levar uma tarefa de software do enunciado à entrega.
+        </p>
+        <div class="brand-hero-badges">
+          <span class="badge badge-green">🤖 AI Agent</span>
+          <span class="badge badge-green">💻 Code · Test · Deploy</span>
+          <span class="badge badge-green">🧪 Geração de Testes</span>
+          <span class="badge badge-green">📦 Sandbox de Execução</span>
+          <span class="badge badge-status-development">Em Desenvolvimento</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label" style="color: var(--neon-green)">Arquitetura</span>
+        <h2 class="section-title">Como o Devinho Funciona</h2>
+        <p class="section-desc">Um pipeline de agentes autônomos que cobrem todo o ciclo de desenvolvimento de software.</p>
+      </div>
+
+      <div class="devinho-pipeline reveal">
+        <div class="pipeline-step">
+          <div class="pipe-icon" style="border-color: rgba(0,255,136,0.3); color: var(--neon-green)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <h4>1. Intake</h4>
+          <p>Normaliza e valida a missão do usuário em linguagem natural</p>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipe-icon" style="border-color: rgba(0,255,136,0.3); color: var(--neon-green)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/></svg>
+          </div>
+          <h4>2. Planner</h4>
+          <p>Decompõe em DAG granular de tarefas com gates de verificação</p>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipe-icon" style="border-color: rgba(0,255,136,0.3); color: var(--neon-green)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 16 12 12 17 8"/><line x1="7" y1="12" x2="17" y2="12"/></svg>
+          </div>
+          <h4>3. Code</h4>
+          <p>Escreve e refatora o código no sandbox, arquivo a arquivo</p>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipe-icon" style="border-color: rgba(0,255,136,0.3); color: var(--neon-green)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4>4. Test</h4>
+          <p>Gera e roda os testes; corrige até passar (gate de verificação)</p>
+        </div>
+        <div class="pipeline-arrow">→</div>
+        <div class="pipeline-step">
+          <div class="pipe-icon" style="border-color: rgba(0,255,136,0.3); color: var(--neon-green)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>5. Deploy</h4>
+          <p>Empacota e publica a aplicação via pipeline de CI/CD</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS -->
+  <section class="section" style="background: var(--bg-secondary)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label" style="color: var(--neon-green)">Status</span>
+        <h2 class="section-title">Roadmap do Devinho</h2>
+      </div>
+      <div class="roadmap reveal">
+        <div class="roadmap-item roadmap-done">
+          <div class="rm-dot rm-done">✓</div>
+          <div class="rm-content">
+            <h4>Prova de Conceito</h4>
+            <p>Agente básico capaz de gerar código a partir de descrições simples</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-active">
+          <div class="rm-dot rm-active">◉</div>
+          <div class="rm-content">
+            <h4>Multi-Agent Pipeline</h4>
+            <p>Orquestração de múltiplos agentes especializados (planner, coder, tester)</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-planned">
+          <div class="rm-dot rm-planned">○</div>
+          <div class="rm-content">
+            <h4>Integração com GitHub</h4>
+            <p>Criação de PRs, code review automático e gestão de issues</p>
+          </div>
+        </div>
+        <div class="roadmap-item roadmap-planned">
+          <div class="rm-dot rm-planned">○</div>
+          <div class="rm-content">
+            <h4>Deploy Autônomo</h4>
+            <p>Configuração e execução de pipelines de CI/CD completos</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="https://github.com/EddieDevLife" class="btn btn-green" target="_blank" rel="noopener" id="devinho-github-main">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-xl);">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2025 Eye of Sauron Platform</p>
+        <div style="display:flex; gap: 1rem;">
+          <a href="../index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Projetos</a>
+          <a href="../../index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Início</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/global.js"></script>
+</body>
+</html>

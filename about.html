@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sobre — Eye of Sauron Platform. Desenvolvedor e pesquisador de IA, criador de agentes autônomos e plataformas de análise de dados." />
+  <title>Sobre — Eye of Sauron Platform</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <svg class="logo-eye" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="18" rx="17" ry="11" stroke="#ff6b35" stroke-width="1.5" opacity="0.4"/><circle cx="18" cy="18" r="6" fill="url(#egAbout)"/><circle cx="18" cy="18" r="3" fill="#ff6b35" opacity="0.9"/><defs><radialGradient id="egAbout" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs></svg>
+        <span>EOS <span class="accent">Platform</span></span>
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="projects/index.html" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="blog/index.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="about.html" style="color: var(--neon-cyan)" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="lang-toggle"><button class="lang-btn active" data-lang="pt">PT</button><button class="lang-btn" data-lang="en">EN</button></div>
+        <button class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <div class="about-avatar-wrap animate-fade-up">
+        <!-- Avatar placeholder - replace with real photo -->
+        <div class="about-avatar">
+          <div class="avatar-initials">EB</div>
+          <div class="avatar-ring avatar-ring-1"></div>
+          <div class="avatar-ring avatar-ring-2"></div>
+        </div>
+        <div class="about-status">
+          <span class="dot dot-green animate-pulse"></span>
+          Disponível para colaborações
+        </div>
+      </div>
+
+      <div class="about-intro animate-fade-up delay-200">
+        <span class="section-label">Sobre Mim</span>
+        <h1 class="about-name">Éderson Barreto</h1>
+        <p class="about-title gradient-text">Software Engineer & Construtor de Sistemas de IA</p>
+        <p class="about-bio">
+          Apaixonado pela interseção entre <strong style="color: var(--text-primary)">Inteligência Artificial</strong> e <strong style="color: var(--text-primary)">impacto real no mundo</strong>. Software Engineer no <strong style="color: var(--text-primary)">@Itaú Unibanco</strong> construindo sistemas que transformam dados em inteligência acionável.
+        </p>
+        <p class="about-bio" style="margin-top: 1rem;">
+          Criador de uma plataforma com três produtos autônomos: o <strong style="color: var(--neon-amber)">Eye of Sauron</strong> — análise investigativa de dados públicos contra a corrupção, inspirada no modelo Palantir mas 100% open-source, ética e transparente; o <strong style="color: var(--neon-green)">Devinho</strong> — engenheiro de software autônomo no estilo do Devin; e a <strong style="color: var(--neon-teal)">Devinha</strong> — engenheira de dados &amp; MLOps autônoma (lakehouse, data contracts e MLflow). Todos falam o mesmo idioma de alertas (risco/hipótese/evidência).
+        </p>
+        <div class="about-actions">
+          <a href="projects/index.html" class="btn btn-primary">Ver Projetos</a>
+          <a href="https://www.linkedin.com/in/eddiedevlife/" class="btn btn-outline" target="_blank" rel="noopener" id="about-linkedin">LinkedIn</a>
+          <a href="https://github.com/EddieDevLife" class="btn btn-outline" target="_blank" rel="noopener" id="about-github">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / FOCUS AREAS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Foco</span>
+        <h2 class="section-title">Áreas de Atuação</h2>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card card reveal">
+          <div class="focus-icon">🤖</div>
+          <h3>Sistemas Investigativos de Dados</h3>
+          <p>Design e desenvolvimento de plataformas que analisam dados públicos em escala para detectar corrupção, fraudes e irregularidades — inspirado em Palantir, com ética e transparência.</p>
+        </div>
+        <div class="focus-card card reveal delay-100">
+          <div class="focus-icon">📊</div>
+          <h3>Agentes de IA & MLOps</h3>
+          <p>Construção de agentes autônomos que orquestram pipelines de dados com Bronze/Silver/Gold lakehouse, data contracts, MLflow e alarm sinks via MCP Protocol.</p>
+        </div>
+        <div class="focus-card card reveal delay-200">
+          <div class="focus-icon">🛡️</div>
+          <h3>Gov-Tech & Transparência</h3>
+          <p>Uso de tecnologia para promover transparência, accountability e combate à corrupção no setor público.</p>
+        </div>
+        <div class="focus-card card reveal delay-300">
+          <div class="focus-icon">⚡</div>
+          <h3>Automação & DevOps</h3>
+          <p>Automação de processos de desenvolvimento, integração com ferramentas como ServiceNow e criação de pipelines CI/CD inteligentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK DEEP DIVE -->
+  <section class="section" style="background: var(--bg-secondary)">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Stack</span>
+        <h2 class="section-title">Tecnologias</h2>
+      </div>
+      <div class="about-tech-grid reveal">
+        <div class="about-tech-group">
+          <h4 class="about-tech-cat">AI & LLM</h4>
+          <div class="about-tech-tags">
+            <span class="tech-tag-lg">GPT-4 / Claude</span>
+            <span class="tech-tag-lg">LangChain</span>
+            <span class="tech-tag-lg">Gemini</span>
+            <span class="tech-tag-lg">RAG</span>
+            <span class="tech-tag-lg">Embeddings</span>
+            <span class="tech-tag-lg">MCP Protocol</span>
+          </div>
+        </div>
+        <div class="about-tech-group">
+          <h4 class="about-tech-cat">Linguagens</h4>
+          <div class="about-tech-tags">
+            <span class="tech-tag-lg">Python</span>
+            <span class="tech-tag-lg">TypeScript</span>
+            <span class="tech-tag-lg">SQL</span>
+            <span class="tech-tag-lg">Bash</span>
+          </div>
+        </div>
+        <div class="about-tech-group">
+          <h4 class="about-tech-cat">Cloud & Dados</h4>
+          <div class="about-tech-tags">
+            <span class="tech-tag-lg">GCP</span>
+            <span class="tech-tag-lg">BigQuery</span>
+            <span class="tech-tag-lg">PostgreSQL</span>
+            <span class="tech-tag-lg">Docker</span>
+          </div>
+        </div>
+        <div class="about-tech-group">
+          <h4 class="about-tech-cat">Ferramentas</h4>
+          <div class="about-tech-tags">
+            <span class="tech-tag-lg">GitHub Actions</span>
+            <span class="tech-tag-lg">ServiceNow</span>
+            <span class="tech-tag-lg">FastAPI</span>
+            <span class="tech-tag-lg">Streamlit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-box card reveal" style="text-align: center; max-width: 600px; margin: 0 auto; padding: var(--space-3xl);">
+        <h2 style="margin-bottom: var(--space-md)">Vamos Conversar?</h2>
+        <p style="margin-bottom: var(--space-2xl)">
+          Aberto a colaborações, parcerias e conversas sobre IA, dados e tecnologia.
+        </p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="https://www.linkedin.com/in/eddiedevlife/" class="btn btn-primary" target="_blank" rel="noopener" id="contact-linkedin">
+            LinkedIn
+          </a>
+          <a href="https://github.com/EddieDevLife" class="btn btn-primary" target="_blank" rel="noopener" id="contact-github">
+            GitHub
+          </a>
+          <a href="https://wa.me/5512988622852" class="btn btn-outline" target="_blank" rel="noopener" id="contact-whatsapp">
+            WhatsApp
+          </a>
+          <a href="https://t.me/EddieDevLife" class="btn btn-outline" target="_blank" rel="noopener" id="contact-telegram">
+            Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-xl);">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2025 Eye of Sauron Platform</p>
+        <a href="index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog técnico — Eye of Sauron Platform. Artigos sobre IA, análise de dados, agentes autônomos e projetos em desenvolvimento." />
+  <title>Blog — Eye of Sauron Platform</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="navbar-logo">
+        <svg class="logo-eye" viewBox="0 0 36 36" fill="none"><ellipse cx="18" cy="18" rx="17" ry="11" stroke="#ff6b35" stroke-width="1.5" opacity="0.4"/><circle cx="18" cy="18" r="6" fill="url(#egBlog)"/><circle cx="18" cy="18" r="3" fill="#ff6b35" opacity="0.9"/><defs><radialGradient id="egBlog" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs></svg>
+        <span>EOS <span class="accent">Platform</span></span>
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="../projects/index.html" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="index.html" style="color: var(--neon-cyan)" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="../about.html" data-i18n="nav.about">Sobre</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="lang-toggle"><button class="lang-btn active" data-lang="pt">PT</button><button class="lang-btn" data-lang="en">EN</button></div>
+        <button class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-content reveal">
+        <span class="section-label" data-i18n="blog.label">Blog</span>
+        <h1 class="page-title" data-i18n="blog.title">Artigos Técnicos</h1>
+        <p class="page-desc" data-i18n="blog.desc">
+          Insights sobre IA, análise de dados e projetos em desenvolvimento.
+        </p>
+      </div>
+    </div>
+    <div class="page-header-glow" aria-hidden="true"></div>
+  </header>
+
+  <!-- BLOG FILTER -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all" id="blog-filter-all">Todos</button>
+        <button class="filter-btn" data-filter="ai-agents" id="blog-filter-agents">IA Agents</button>
+        <button class="filter-btn" data-filter="data-analysis" id="blog-filter-data">Data Analysis</button>
+        <button class="filter-btn" data-filter="gov-tech" id="blog-filter-gov">Gov-Tech</button>
+        <button class="filter-btn" data-filter="devinho" id="blog-filter-devinho">Devinho</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG POSTS -->
+  <main class="section">
+    <div class="container">
+      <div class="blog-full-grid">
+
+        <!-- Post 1 -->
+        <article class="blog-post-card card reveal" data-category="ai-agents devinho" id="blog-post-devinho">
+          <div class="bpost-meta">
+            <div class="bpost-tags">
+              <span class="badge badge-green">IA Agents</span>
+              <span class="badge badge-green">Devinho</span>
+            </div>
+            <time class="blog-date" datetime="2025-01-15">15 Jan 2025 · 8 min leitura</time>
+          </div>
+          <h2 class="bpost-title">Como Construí um Engenheiro de Software Autônomo</h2>
+          <p class="bpost-excerpt">
+            Uma jornada pelo desenvolvimento do Devinho — desde a concepção até a implementação de um agente de IA capaz de escrever, testar e fazer deploy de código de forma independente. Compartilho a arquitetura, os desafios técnicos e as lições aprendidas ao explorar os limites dos LLMs na engenharia de software.
+          </p>
+          <a href="como-construi-devinho.html" class="bpost-link" id="blog-post-devinho-link">
+            Ler artigo completo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-post-card card reveal" data-category="gov-tech data-analysis" id="blog-post-corruption">
+          <div class="bpost-meta">
+            <div class="bpost-tags">
+              <span class="badge badge-amber">Gov-Tech</span>
+              <span class="badge badge-amber">Data Analysis</span>
+            </div>
+            <time class="blog-date" datetime="2025-02-01">01 Fev 2025 · 12 min leitura</time>
+          </div>
+          <h2 class="bpost-title">Usando IA para Detectar Corrupção em Dados Públicos</h2>
+          <p class="bpost-excerpt">
+            Metodologia e técnicas utilizadas no projeto Eye of Sauron para identificar irregularidades em contratos governamentais. Exploramos análise de redes de relacionamento, detecção de anomalias com machine learning e como transformar dados abertos do governo em inteligência acionável.
+          </p>
+          <a href="ia-detectar-corrupcao.html" class="bpost-link" id="blog-post-corruption-link">
+            Ler artigo completo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-post-card card reveal" data-category="ai-agents" id="blog-post-mcp">
+          <div class="bpost-meta">
+            <div class="bpost-tags">
+              <span class="badge badge-cyan">IA Agents</span>
+              <span class="badge badge-cyan">MCP</span>
+            </div>
+            <time class="blog-date" datetime="2025-02-20">20 Fev 2025 · 6 min leitura</time>
+          </div>
+          <h2 class="bpost-title">MCP Protocol: O Futuro da Integração de Agentes de IA</h2>
+          <p class="bpost-excerpt">
+            Explorando o Model Context Protocol e como ele está revolucionando a forma como agentes de IA se comunicam com ferramentas e sistemas externos. Uma análise prática com exemplos de implementação com Python e TypeScript.
+          </p>
+          <a href="mcp-protocol-agentes-ia.html" class="bpost-link" id="blog-post-mcp-link">
+            Ler artigo completo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-xl);">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2025 Eye of Sauron Platform</p>
+        <a href="../index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/global.js"></script>
+</body>
+</html>

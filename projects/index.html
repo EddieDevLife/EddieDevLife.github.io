@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo completo de projetos da Eye of Sauron Platform — IA, Análise de Dados, Agentes Autônomos e mais." />
+  <title>Projetos — Eye of Sauron Platform</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/projects.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="navbar-logo">
+        <svg class="logo-eye" viewBox="0 0 36 36" fill="none">
+          <ellipse cx="18" cy="18" rx="17" ry="11" stroke="#ff6b35" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="18" cy="18" r="6" fill="url(#eyeGradP)"/>
+          <circle cx="18" cy="18" r="3" fill="#ff6b35" opacity="0.9"/>
+          <defs><radialGradient id="eyeGradP" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs>
+        </svg>
+        <span>EOS <span class="accent">Platform</span></span>
+      </a>
+      <ul class="navbar-links" id="nav-links">
+        <li><a href="index.html" style="color: var(--neon-cyan)" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="../blog/index.html" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="../about.html" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="../index.html#contact" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="lang-toggle"><button class="lang-btn active" data-lang="pt">PT</button><button class="lang-btn" data-lang="en">EN</button></div>
+        <button class="navbar-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="container">
+      <div class="page-header-content reveal">
+        <span class="section-label" data-i18n="projects.label">Portfólio</span>
+        <h1 class="page-title" data-i18n="projects.title">Projetos em Destaque</h1>
+        <p class="page-desc" data-i18n="projects.desc">
+          Uma seleção dos projetos mais impactantes da plataforma.
+        </p>
+      </div>
+    </div>
+    <div class="page-header-glow" aria-hidden="true"></div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Todos</button>
+        <button class="filter-btn" data-filter="eye-of-sauron" id="filter-eos">
+          <span class="dot dot-amber"></span> Eye of Sauron
+        </button>
+        <button class="filter-btn" data-filter="devinho" id="filter-devinho">
+          <span class="dot dot-green"></span> Devinho
+        </button>
+        <button class="filter-btn" data-filter="devinha" id="filter-devinha">
+          <span class="dot dot-teal"></span> Devinha
+        </button>
+        <button class="filter-btn" data-filter="gov-tech" id="filter-govtech">Gov-Tech</button>
+        <button class="filter-btn" data-filter="prop-tech" id="filter-proptech">PropTech</button>
+        <button class="filter-btn" data-filter="monitoring" id="filter-monitoring">Monitoring</button>
+        <button class="filter-btn" data-filter="ai-agents" id="filter-aiagents">AI Agents</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <main class="section">
+    <div class="container">
+      <div class="projects-full-grid">
+
+        <!-- EYE OF SAURON GROUP -->
+        <div class="projects-group reveal">
+          <div class="group-label">
+            <div class="group-dot group-dot-amber"></div>
+            <span>Eye of Sauron</span>
+          </div>
+        </div>
+
+        <!-- Project: Anti-Corruption -->
+        <article class="project-card-full card card-amber reveal" data-category="eye-of-sauron data-analysis gov-tech" id="proj-anticorruption">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-active"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.active">Ativo</span></span>
+              <span class="badge badge-amber">Gov-Tech</span>
+              <span class="badge badge-amber">Data Analysis</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Combate à Corrupção</h2>
+            <p class="pcf-desc">Sistema inteligente de análise de dados públicos para identificação de padrões suspeitos e irregularidades em licitações, contratos governamentais e gastos públicos. Utiliza machine learning para detecção de anomalias e redes de relacionamento.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">BigQuery</span>
+              <span class="tech-tag">Graph Analysis</span>
+              <span class="tech-tag">NLP</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="eye-of-sauron/anti-corruption.html" class="btn btn-amber" id="proj-anticorruption-detail">Ver Projeto</a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener" id="proj-anticorruption-github">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project: Real Estate -->
+        <article class="project-card-full card card-amber reveal" data-category="eye-of-sauron data-analysis prop-tech" id="proj-realestate">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-active"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.active">Ativo</span></span>
+              <span class="badge badge-amber">PropTech</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Inteligência Imobiliária</h2>
+            <p class="pcf-desc">Plataforma de análise de oportunidades no mercado imobiliário usando dados públicos e modelos preditivos. Identifica imóveis subvalorizados, tendências de mercado e áreas com alto potencial de valorização.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">APIs Públicas</span>
+              <span class="tech-tag">Geospatial</span>
+              <span class="tech-tag">Scraping</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="eye-of-sauron/real-estate.html" class="btn btn-amber" id="proj-realestate-detail">Ver Projeto</a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener" id="proj-realestate-github">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project: Log Analysis -->
+        <article class="project-card-full card reveal" data-category="eye-of-sauron monitoring data-analysis" id="proj-logs">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-active"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.active">Ativo</span></span>
+              <span class="badge badge-cyan">Monitoring</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Análise Inteligente de Logs</h2>
+            <p class="pcf-desc">Agente autônomo que monitora e analisa logs de sistemas em tempo real. Identifica erros, anomalias, padrões de falha e gera relatórios automáticos de diagnóstico usando LLMs para interpretação contextual.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LLM</span>
+              <span class="tech-tag">Streaming</span>
+              <span class="tech-tag">Real-time</span>
+              <span class="tech-tag">Alerting</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="eye-of-sauron/log-analysis.html" class="btn btn-primary" id="proj-logs-detail">Ver Projeto</a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener" id="proj-logs-github">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project: Digital Twins -->
+        <article class="project-card-full card reveal" data-category="eye-of-sauron monitoring simulation" id="proj-twins">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="3"/><circle cx="15" cy="12" r="3"/><path d="M6 12a3 3 0 000-6h0a3 3 0 000 6"/><path d="M18 12a3 3 0 010-6h0a3 3 0 010 6"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-development"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.development">Em Desenvolvimento</span></span>
+              <span class="badge badge-cyan">Simulation</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Gêmeos Digitais</h2>
+            <p class="pcf-desc">Criação de representações digitais de sistemas reais para simulação, monitoramento e predição. Replica o comportamento de sistemas físicos ou organizacionais em ambiente virtual para análise e tomada de decisão.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Simulation</span>
+              <span class="tech-tag">IoT Data</span>
+              <span class="tech-tag">Digital Twin</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="#" class="btn btn-primary" id="proj-twins-detail">Em Breve</a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener" id="proj-twins-github">GitHub</a>
+          </div>
+        </article>
+
+        <!-- DEVINHO GROUP -->
+        <div class="projects-group reveal" style="margin-top: var(--space-2xl);">
+          <div class="group-label">
+            <div class="group-dot group-dot-green"></div>
+            <span>Devinho</span>
+          </div>
+        </div>
+
+        <!-- Project: Devinho -->
+        <article class="project-card-full card card-green reveal" data-category="devinho ai-agents autonomous" id="proj-devinho">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-development"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.development">Em Desenvolvimento</span></span>
+              <span class="badge badge-green">AI Agent</span>
+              <span class="badge badge-green">Autonomous</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Devinho — Engenheiro Autônomo</h2>
+            <p class="pcf-desc">Agente de IA autônomo que atua como um engenheiro de software completo. Dado um objetivo, o Devinho planeja, arquiteta, codifica, testa, refatora e faz deploy de aplicações inteiramente por conta própria — similar ao Devin AI.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">LLM</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Multi-Agent</span>
+              <span class="tech-tag">Code Generation</span>
+              <span class="tech-tag">Testing</span>
+              <span class="tech-tag">CI/CD</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="devinho/index.html" class="btn btn-green" id="proj-devinho-detail">Ver Projeto</a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener" id="proj-devinho-github">GitHub</a>
+          </div>
+        </article>
+
+        <!-- DEVINHA GROUP -->
+        <div class="projects-group reveal" style="margin-top: var(--space-2xl);">
+          <div class="group-label">
+            <div class="group-dot group-dot-teal"></div>
+            <span>Devinha</span>
+          </div>
+        </div>
+
+        <!-- Project: Devinha -->
+        <article class="project-card-full card card-teal reveal" data-category="devinha data-analysis ai-agents autonomous" id="proj-devinha">
+          <div class="pcf-left">
+            <div class="project-icon project-icon-teal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0018 0V5"/><path d="M3 12a9 3 0 0018 0"/></svg>
+            </div>
+            <div class="pcf-meta">
+              <span class="badge badge-status-development"><svg width="6" height="6" viewBox="0 0 6 6" fill="currentColor"><circle cx="3" cy="3" r="3"/></svg><span data-i18n="status.development">Em Desenvolvimento</span></span>
+              <span class="badge badge-teal">Data &amp; MLOps</span>
+              <span class="badge badge-teal">Autonomous</span>
+            </div>
+          </div>
+          <div class="pcf-body">
+            <h2 class="pcf-title">Devinha — Engenheira de Dados &amp; MLOps</h2>
+            <p class="pcf-desc">Agente autônomo de engenharia de dados. Ingere de fontes públicas com escada resiliente, organiza em Lakehouse Bronze/Silver/Gold (Parquet/DuckDB), valida data contracts + ética por máquina, registra no MLflow e dispara alertas canônicos via MCP — o mesmo idioma do Eye of Sauron.</p>
+            <div class="pcf-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">DuckDB / Parquet</span>
+              <span class="tech-tag">Data Contracts</span>
+              <span class="tech-tag">MLflow</span>
+              <span class="tech-tag">MCP Protocol</span>
+            </div>
+          </div>
+          <div class="pcf-actions">
+            <a href="devinha/index.html" class="btn btn-teal" id="proj-devinha-detail">Ver Projeto</a>
+            <a href="https://github.com/EddieDevLife/Devinho-v3" class="btn btn-outline" target="_blank" rel="noopener" id="proj-devinha-github">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border-subtle); padding-top: var(--space-xl);">
+        <p style="color: var(--text-muted); font-size: 0.85rem;">© 2025 Eye of Sauron Platform</p>
+        <a href="../index.html" style="color: var(--neon-cyan); font-size: 0.85rem; font-family: var(--font-mono);">← Voltar ao início</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/global.js"></script>
+</body>
+</html>
