@@ -7,7 +7,7 @@
   "use strict";
 
   // Resolução da base da API: localStorage → window.EOS_API_BASE → default.
-  const DEFAULT_BASE = "http://127.0.0.1:8000";
+  const DEFAULT_BASE = "https://eos-api-a87a.onrender.com";
   function getBase() {
     return (
       localStorage.getItem("eosApiBase") ||
@@ -31,10 +31,30 @@
     }[c]));
   }
 
+  function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
+
   async function fetchJSON(path) {
     const res = await fetch(getBase() + path, { headers: { Accept: "application/json" } });
     if (!res.ok) throw new Error("HTTP " + res.status);
     return res.json();
+  }
+
+  // Free tier hiberna: 1a chamada pode demorar (~50s). Tenta acordar.
+  async function wakeUp(maxTries) {
+    for (let i = 1; i <= maxTries; i++) {
+      try {
+        await fetchJSON("/health");
+        return true;
+      } catch (e) {
+        setStatus(
+          `Acordando a API (cold start do free tier)… tentativa ${i}/${maxTries}. ` +
+          `Isso pode levar até ~50s.`,
+          ""
+        );
+        await sleep(6000);
+      }
+    }
+    return false;
   }
 
   function renderStats(stats) {
@@ -97,11 +117,31 @@
       renderAlerts(alerts);
       setStatus(`${alerts.length} alerta(s) · fonte: ${getBase()}`, "ok");
     } catch (err) {
+      // Pode ser cold start: tenta acordar a API e recarregar 1x.
+      const acordou = await wakeUp(8);
+      if (acordou) {
+        try {
+          const [stats, alerts] = await Promise.all([
+            fetchJSON("/stats"),
+            fetchJSON(
+              "/alertas?limit=100" +
+                (minScore ? "&min_score=" + encodeURIComponent(minScore) : "") +
+                (entidade ? "&entidade=" + encodeURIComponent(entidade) : "")
+            ),
+          ]);
+          renderStats(stats);
+          renderAlerts(alerts);
+          setStatus(`${alerts.length} alerta(s) · fonte: ${getBase()}`, "ok");
+          return;
+        } catch (e2) {
+          err = e2;
+        }
+      }
       renderStats({ total_alertas: "—", total_entidades: "—", por_camada: {} });
       document.getElementById("alertas-list").innerHTML = "";
       setStatus(
         "Não foi possível conectar à API (" + getBase() + "). " +
-          "Suba a API (uvicorn api:app) ou ajuste a URL acima. Detalhe: " + err.message,
+          "Tente recarregar em alguns segundos, ou ajuste a URL acima. Detalhe: " + err.message,
         "erro"
       );
     }
